@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 18px;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+body {
+    position: relative;
+    max-width: 100vw;
+    max-height: auto;
+    /* background: wheat; */
+    overflow-x: hidden;
+}
+
+body a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+body a::before {
+    content: '';
+    text-decoration: none;
+}
+
+ /* on va donner du style à notre barre de navigation */
+
+header#header_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+header #navsection {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    height: 5rem;
+}
+
+/* header #navsection img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left:5em;
+} */
+
+header #navsection h1 {
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+}
+
+header #navsection .listitem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+    position: relative;
+}
+
+header #navsection .listitem a {
+    text-decoration: none;
+    color: aqua;
+    opacity: 75%;
+}
+header #navsection .listitem a:hover,
+header #navsection .listitem a.active {
+    border-radius: 3px;
+    background:#aea7a7 ;
+    color: aqua;
+    opacity: 100%;
+    padding: 5px 5px;
+    
+}
+
+header #navsection .socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+header #navsection .socialmedia a {
+    text-decoration: none;
+    color: white;
+    /* border-radius: 50%; */
+    padding: 2px;
+    text-align: center;
+}
+
+main .main-firt {
+    background: url(/images/chutedeau1jpg.jpg)!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 30rem; */
+}
+main .main-firt img {
+    width: 25px;
+    height: 25px;
+
+}
+
+main .main-firt:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #aea7a700;
+    position: relative;
+}
+main .main-firt .contact_us {
+   background: #aea7a796;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+main .main-firt .contact_us h1 {
+    text-align: center;
+    display: inline-block;
+    width: 13rem;
+    color: red;
+}
+main .main-firt .contact_us button {
+    border-radius: 50%;
+    border: 2px solid red;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+main .main-firt .contact_us .address_number {
+    display: grid;
+    grid-template-columns: 35px 15rem;
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
+}
+main .main-firt .p1,
+main .main-firt .p2,
+main .main-firt .p3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18rem;
+    width: 100%;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 3rem;
+}
+main .main-firt .p1 {
+    background: orange;
+    justify-content: center;
+}
+main .main-firt .p2 {
+    background: rgb(0, 255, 76);
+    justify-content: center;
+}
+main .main-firt .p3 {
+    background: rgb(0, 187, 255);
+    justify-content: center;
+}
+main .main-firt .p1 button,
+main .main-firt .p2 button,
+main .main-firt .p3 button {
+    height: 2rem;
+    border-radius: 10px;
+    width: 14rem;
+    background: yellow;
+    color: #1114d498;
+}
+main .main-firt h1 {
+    font-size: 1.8rem;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .patner_content {
+    background: linear-gradient(45deg, rgb(85, 85, 244),rgb(3, 124, 3));
+    text-align: center;
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+ }
+main .patner_content .patner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.album_photo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+.album_photo img {
+    width: 10
+    5rem;
+    height: 10rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25%;
+    width: 100%;
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    background: #aea7a7;
+    
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+footer img:hover{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+footer #social,
+ #address,
+ #nav-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+#nav-footer a:hover,
+#nav-footer a.active {
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1100px) {
+    
+    *{
+        font-size: 12px;
+    }
+    body{
+        overflow-x: hidden;
+
+    }
+    header{
+        width: 100%;
+    }
+    header #navsection{
+        gap: 10%;
+    }
+
+    .album_photo {
+        display: grid;
+        grid-template-columns: repeat(4, 14rem);
+        grid-area: 0;
+        background: black;
+        max-height: 20rem;
+    }
+
+    main .patner_content {
+        width: 100%;
+        height: 38rem;
+    }
+    
+    main .patner_content .patner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+    }
+} 

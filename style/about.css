@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 18px;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+body {
+    position: relative;
+    max-width: 100vw;
+    max-height: auto;
+    background: wheat;
+    overflow-x: hidden;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+body a::before {
+    content: '';
+    text-decoration: none;
+}
+
+ /* on va donner du style à notre barre de navigation */
+
+header#header_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+header #navsection {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    height: 5rem;
+}
+
+/* header #navsection img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left:5em;
+} */
+
+header #navsection h1 {
+    text-align: center;
+    z-index: 10;
+}
+
+header #navsection .listitem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+header #navsection .listitem a {
+    text-decoration: none;
+    color: aqua;
+    opacity: 75%;
+}
+header #navsection .listitem a:hover {
+    border-radius: 3px;
+    background:#aea7a7 ;
+    color: aqua;
+    opacity: 100%;
+    padding: 5px 5px;
+    
+}
+
+header #navsection .socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+header #navsection .socialmedia a {
+    text-decoration: none;
+    color: white;
+    /* border-radius: 50%; */
+    padding: 2px;
+    text-align: center;
+}
+
+
+
+main section.main_content {
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .patner_content {
+    background: linear-gradient(45deg, rgb(85, 85, 244),rgb(3, 124, 3));
+    text-align: center;
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .patner_content .patner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+
+
+
+
+
+.album_photo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+.album_photo img {
+    width: 15rem;
+    height: 10rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #aea7a7;
+    
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+footer img:hover{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+footer #social,
+ #address,
+ #nav-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+#nav-footer a:hover {
+    color: red;
+    cursor: pointer;
+}
