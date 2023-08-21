@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>OrganEvent / Acceuil</title>
+</head>
+<body>
+    <header class="header_content">
+ <!-- Barre de navigation pour ma page initiale         -->
+        <nav id="navsection">
+                <!-- <img src="/images/mon_logo.jpg" alt="" srcset=""> -->
+                <h1 class="logo">Orga<span style="color: red;">Event</span>.com <br>
+                    <span style="font-size: 10px; color: rgba(255, 0, 0, 0.645);">SONS / LUMIERE / VIDEO </span>
+                </h1>
+            <nav id="navbar">
+                <ul class="listitem">
+                    <li class="item"><a href="/Html/index.html" class="active">Acceuil</a></li>
+                    <li class="item"><a href="/Html/formule.html">Nos Formules </a>
+                        <!-- <ul class="sous_list">
+                            <li class="sous_item"><a href="">Seminère / Incentive / Team Building </a></li>
+                            <li class="sous_item"><a href="">entreprise</a></li>
+                            <li class="sous_item"><a href="">Sons / Lumière / Matèriel DJ & Scène</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="item"><a href="/Html/services.html">Nos services</a>
+                        <!-- <ul class="sous_list">
+                            <li class="sous_item"><a href="">ENTREPRISE</a></li>
+                            <li class="sous_item"><a href="">MARIAGE / EVENEMENT RELIGIEUX </a></li>
+                            <li class="sous_item"><a href="">ANNIVERSAIRE / EVENEMENT PRIVE</a></li>
+                            <li class="sous_item"><a href="">LOCATION</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="item"><a href="/Html/about.html">A-propos</a></li>
+                    <li class="item"><a href="/Html/help.html">Contact</a></li>
+                    <li class="item"><a href="/Html/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="socialmedia">
+                <a href="" style="background: rgba(0, 0, 255, 0.752);border-radius: 5px;">F</a>
+                <a href="" style="background: green; border-radius: 50%;" >w</a>
+                <a href="" style="background: rgba(0, 0, 255, 0.752); border-radius: 5px;">In</a>
+            </div>
+            </nav>
+<!-- presentation de l'entreprise avec une courte video -->
+            <nav id="presentation">
+                <video autoplay loop muted plays-inline class="backgound-clip" >
+                    <source media="(min-width:100vw )" src="/video/videobackground.mp4" type="video/mp4">
+                </video>
+                <div id="video">
+                    <h1>Orga<span>Event</span></h1>
+                    <h3>Agence Evenementielle</h3>
+                    <button id="btn" type="submit"><a href="#agence">EN SAVOIR PLUS</a></button>
+                </div>
+ <!-- petite promos pour les nouveaux clients de l'entreprise -->
+                <nav class="promotion">
+                    <button onclick="toggelpopup()">APPELLEZ NOUS</button>
+                    <span style="font-size: 25px;">15% de remises pour tous les nouveaux clients</span>
+                    <button type="submit" onclick="devis()" class="start">J'EN PROFITE</button>
+
+                </nav>
+            </nav>
+        </nav>
+
+        <div id="orverlay">
+            <div id="pop-call">
+                <h3>APPELLEZ CE NUMERO !!!</h3>
+                <p>679680...</p>
+                <a href="javascript:void(0)" class="pop-exit" onclick="toggelpopup()">Fermer</a>
+            </div>
+        </div>
+
+        <form id="popup-devis">
+            <button type="submit" id="close" onclick="devis()">Fermer</button>
+            <div class="devis_contener">
+                <h1 style="color: red;">UN PROJET EVENEMENTIELLE ? </h1>
+                <div class="data">
+                    <input type="text" id="name" placeholder="Nom...">
+                    <input type="text" id="secondname" placeholder="Prénom...">
+                    <input type="email"  id="email" placeholder="email">
+                    <input type="tel" id="number" placeholder="Numero de tel : ">
+                    <!-- <label for="service">Services</label> -->
+                    <select name="service" id="service" aria-placeholder="selectionnez type d'évènement">
+                        <option value="Entreprise">Entreprise / Incentive</option>
+                        <option value="Anniversaire">ANNIVERSAIRE / EVENEMENT PRIVEE</option>
+                        <option value="mariage">MARIAGE</option>
+                        <option value="location">LOCATION</option>
+                    </select>
+                    <!-- <label for="date">Selectionnez votre date</label> -->
+                    <input type="date" name="date" id="date" placeholder="selectionnez votre date ">
+                </div> 
+                <div class="commentaire">
+                    <textarea name="commentaire" id="commentaire" cols="50" rows="10" >Décrivez nous vos besoins</textarea>
+                    <button type="submit">VALIDER</button>
+                </div>
+            </div>
+        </form>
+    </header>
+
+
+    <main class="main_container">
+        <div class="about-us" id="agence">
+            <h1>Agence événementielle</h1>
+            <h3>professionnels et particuliers</h3>
+            <p><strong>OrgaEvent </strong>vous accompagne à 360° dans la réalisation de tous vos projets événementiels professionnels et particuliers. <br> 
+                Une agence événementielle jeune et dynamique avec de 
+                longues années d'experience à vos côtés pour réaliser tous vos projets événementiels.</p>
+            <p>Soirée d'entreprise ou privée, lancement de produit, conférence, séminaire, team-building, défilé de mode ou mariage,  
+                vous souhaitez mettre en valeur votre société, vos produits ; 
+                former vos collaborateurs ou bien les récompenser ; ou tout simplement fêter un anniversaire, un mariage ou un baptême.</p>
+                <p>Faite appel à <strong>OrgaEvent</strong>, agence événementielle et organisatrice d'événement pour vous accompagner tant sur l'aspect logistique que technique.</p>
+                
+                <p>​Avec de longues années d'expérience dans l'organisation d'événements en tous genres et un grand réseau de partenaires dans toute le Cameroun. 
+                Votre agence événementielle <strong>OrgaEvent</strong> est le partenaire idéal afin de menez à bien tous vos projets événementiels.​</p>
+                <button type="submit"><a href="#presentation">V</a></button>
+        </div> 
+        <div id="organisation_content">
+            <div class="organisation">
+                    <h1>ORGANISATION</h1>
+                    <h3>PLANIFICATION / LOGISTIQUE / EXPLOITATION</h3>
+                    <P>Notre objectif : valoriser le potentiel de votre entreprise à travers des solutions clé en main.</P>
+                    <P>Parlez nous de votre projet et nous mettrons tout en oeuvre avec un des membre de notre équipe afin de réaliser votre projet et faire de votre événement un succès.
+                        <strong>OrgaEvent</strong>, votre agence événementielle dans la ville de Douala, est votre partenaire idéal pour tous vos projets.</P>
+                    <P>De l'organisation de votre événement, en passant par la logistique ou bien la technique <strong>OrgaEvent</strong> et son équipe sont la pour vous accompagner tout au long de vos événements</P>
+                    <button type="submit"><a href="/Html/services.html">EN SAVOIR PLUS</a></button>
+            </div>
+            <div class="img_organisation">
+                <img src="/images/saint-david-bonanjo(1).jpg" alt="image d'une salle de fête" srcset="">
+            </div>
+        </div>  
+
+            <div class="animation">
+                <div class="image-animation">
+                    <img src="/images/oechestre.jpg" alt="image d'un orchestre" srcset="">
+                </div>
+                <div class="text-animation">
+                    <h1>ANIMATION</h1>
+                    <h3>ACTIVITES / DJ / ORCHESTRE</h3>
+                    <P>Vous souhaitez vous divertir et vivre des moments inoubliables à travers des activités musicales, sportives, blind test et quizz et bien d'autres. <strong>OrganEvent</strong> et son grand réseau de partenaires à travers toute le Cameroun vous accompagnera afin de mener au mieux vos projets événementiels et 
+                    divertir vos invités et convives. 
+                    Ne laissez plus rien de côté et faite appel à des professionnels de l'événementiel</P>
+                    <button type="submit"><a href="/Html/services.h tml.location">EN SAVOIR PLUS</a></button>
+                </div>    
+            </div>
+
+            <div class="technique">
+                <div class="tech-text">
+                    <h1>TECHNIQUE</h1>
+                    <h3>SONS / LUMIERE / VIDEO</h3>
+                    <P><strong>OrgaEvent</strong> dispose d'une expertise technique de plus de 10 années dans le domaine de l'événementiel.
+                     Composé de professionnels qualifiés et certifiés nous disposons d'un large choix de matériel haut de gamme en location : 
+                    sonorisation, enceinte, micro sans fil, écran,  vidéo projecteur et cabine de traduction...</P>
+                    <p>Vous méritez le meilleur pour votre entreprise, vos collaborateurs et vos proches. 
+                        Profitez de tout notre parc de matériel en location ainsi que les équipes techniques dédiées à l'exploitation.</p>
+                    <button type="submit"><a href="/Html/services.html">EN SAVOIR PLUS</a></button>
+                </div>
+                <div class="img-tech">
+                    <img src="/images/platine.jpg" alt="image de platine ici" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="patner_content">
+            <h1 style="font-size: 31px;">ILS NOUS FONT CONFIANCE</h1>
+            <P style="text-align: center;"><strong>OrgaEvent</strong> c'est une multitude de références, qu'elles soient nationales, internationales ou locales.
+                <br> Petites entreprises ou grandes sociétés, associations, particuliers, fédérations ou institutions,
+                <br><strong>OrgaEvent</strong> est le partenaire de tous vos projets événementiels.</P>
+            <div class="patner">
+                <img src="/images/afrfbank.png" alt="" srcset="">
+                <img src="/images/santa_lucia.png" alt="" srcset="" style="height: 10rem;width: 7rem;">
+                <img src="/images/serena_1.png" alt="" srcset="">
+                <img src="/images/epimage.jpg" alt="" srcset="" style="width: 219px; height: 124px;">
+            </div>
+        </div>
+        <section class="album_photo">
+            <div id="salle_fête"> </div>
+        </section>
+    </main>
+    
+
+    <footer class="footer_content">
+        <div id="social">
+            <img src="/images/facebook.jpg" alt="" srcset="">
+            <img src="/images/whap.png" alt="" srcset="">
+            <img src="/images/linkendi.jpg" alt="" srcset="">
+        </div>
+        <div id="address">
+            <span>Copyright 2023 - <strong>OrgaEvent</strong>. Tous droits réservés</span>
+            <span>Tel : 620363675</span>
+            <span>Mob : 679680940</span>
+            <span>@ : info@orgaevent.com</span>
+            <span>vous pouvez egalement nous trouver sur : <a href="#" style="color: blue;">D' Fiesta</a> </span>
+        </div>
+        <div id="nav-footer">
+            <a href="/Html/index.html" class="active">Acceuil</a>
+            <a href="/Html/formule.html">Nos Formules </a>
+            <a href="/Html/services.html">Nos services</a>
+            <a href="/Html/about.html">A-propos</a>
+            <a href="/Html/help.html">Contact</a>
+            <a href="/Html/blog.html">Blog</a>
+        </div>
+    </footer>
+    <script src="/script/script.js"></script>
+</body>
+</html>

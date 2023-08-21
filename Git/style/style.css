@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 18px;
+    outline: 0;
+    vertical-align: baseline;
+    /* overflow-x: hidden; */
+}
+
+#orverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #33333380;
+    z-index: 98;
+    display: none;
+}
+.open {
+    display: block !important; 
+}
+
+#pop-call{
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pop-exit {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 10px;
+    background: black;
+    color: aliceblue;
+    padding: 10px 5px;
+}
+
+#popup-devis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #33333388;
+    z-index: 98;
+    display: none;
+}
+#popup-devis .start {
+    display: block !important;
+}
+#close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin: 25px 25px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    color: white;
+    background: rgb(1, 1, 16);
+}
+
+#popup-devis .devis_contener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid black;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+
+}
+
+#popup-devis .devis_contener .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.commentaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.commentaire button {
+    padding: 5px 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.data input {
+    border-radius: 10px;
+    height: 25px;
+    padding: 10px 10px;
+}
+select {
+    border-radius: 10px;
+}
+
+
+
+body {
+    position: relative;
+    max-width: 100vw;
+    max-height: auto;
+    background: rgba(245, 222, 179, 0.657);
+    overflow-x: hidden !important;
+    z-index: 100;
+}
+
+body a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+body a::before {
+    content: '';
+    text-decoration: none;
+}
+
+ /* on va donner du style à notre barre de navigation */
+
+header#header_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+header #navsection {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    height: 5rem;
+}
+
+/* header #navsection img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left:5em;
+} */
+
+header #navsection h1 {
+    text-align: center;
+    z-index: 10;
+}
+
+header #navsection .listitem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+    position: relative;
+}
+
+header #navsection .listitem a {
+    text-decoration: none;
+    color: rgb(4, 17, 17);
+    opacity: 75%;
+}
+header #navsection .listitem a:hover,
+header #navsection .listitem a.active {
+    border-radius: 3px;
+    background:#e91616 ;
+    color: rgb(0, 9, 9);
+    opacity: 100%;
+    padding: 5px 5px;
+    
+}
+
+header #navsection .socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+header #navsection .socialmedia a {
+    text-decoration: none;
+    color: white;
+    /* border-radius: 50%; */
+    padding: 2px;
+    text-align: center;
+}
+
+
+header #presentation {
+    /* background-color: #f3eeee; */
+    border: 1px solid black;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem;
+    position: relative;
+    overflow: hidden;
+}
+header #presentation #video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.backgound-clip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+header #presentation #video h1  {
+    font-size: 7rem;
+}
+
+header #presentation #video h3  {
+    font-size: 2.5rem;
+}
+header #presentation #video h1 span  {
+    font-size: 7rem;
+    color: red;
+}
+header #presentation #video button {
+    border: none;
+    font-size: 25px;
+    color: antiquewhite;
+    background: red;
+    border-radius: 5px;
+    padding: 5px 7px 5px 7px;
+}
+header #presentation #video button:hover {
+    background: rgba(255, 0, 0, 0.452);
+    color: rgb(230, 239, 239);
+    cursor: pointer;
+}
+
+/* #navbar li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+#navbar ul li a {
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    display: block;
+    text-align: center;
+
+}
+#navbar ul ul {
+    position: absolute;
+    visibility: hidden;
+} */
+    
+
+
+#presentation .promotion {
+    width: 100%;
+    height: 5rem;
+    color: white;
+    background: rgba(255, 0, 0, 0.792);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+
+}
+
+#presentation .promotion button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 9px 5px 9px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.476),red);
+    /* box-shadow: 0 15px 30px black; */
+}
+#presentation .promotion button::before {
+    background: linear-gradient(45deg white), transparent;
+}
+
+#presentation .promotion button:hover {
+    color: rgb(14, 14, 14);
+    background: rgb(244, 244, 247);
+    cursor: pointer;
+    box-shadow: 0 15px 20px black;
+    letter-spacing: 2px;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.main_container .about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    /* border: 1px solid red; */
+    margin-top: 25px;
+    padding: 20px 20px ;
+    background: #e849494d;
+}  
+
+.main_container .about-us h1 {
+    font-size: 2.5rem;
+}
+
+
+.main_container .about-us h3 {
+    font-size: 1.5rem;
+    color: red;
+}
+
+main .patner_content {
+    background: linear-gradient(45deg, rgb(243, 243, 245),rgb(239, 24, 24));
+    text-align: center;
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .patner_content .patner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+
+
+.main_container .about-us p {
+    text-align: center;
+}
+
+.main_container .about-us button {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    padding: 10px 10px;
+    border: 2px groove red ;
+    border-radius: 50%;
+    background: none;
+    color: red;
+}
+.main_container .about-us button:hover{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    background: red;
+    color: black;
+}
+
+#organisation_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 7px 7px;
+    width: 100%;
+    height: 35rem;
+    /* border: 1px solid #aea7a7; */
+}
+
+#organisation_content .organisation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#organisation_content .img_organisation{
+    height: 35rem;
+    width: 30rem;
+}
+
+#organisation_content .organisation p {
+    text-align: center;
+}
+#organisation_content .organisation h1 {
+    font-size: 2rem;
+}
+#organisation_content .organisation h3 {
+    font-size: 1rem;
+    color: red;
+}
+.img_organisation img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 7px 7px;
+    width: 100%;
+    height: 35rem;
+}
+
+.animation .text-animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.animation .text-animation h1 {
+    font-size: 2rem;
+}
+.animation .text-animation h3 {
+    font-size: 1rem;
+    color: red;
+}
+.animation .text-animation p {
+    text-align: center;
+}
+.animation img {
+    width: 30rem;
+    height: 30rem;
+}
+
+
+.technique {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.technique img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.technique .tech-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+    gap: 15px;
+}
+.technique .tech-text h1 {
+    font-size: 1rem;
+}
+.technique .tech-text h3 {
+    font-size: 1rem;
+    color: red;
+}
+.technique .tech-text p {
+    text-align: center;
+}
+.technique .tech-text button,
+.animation .text-animation button,
+#organisation_content .organisation button{
+    border: none;
+    font-size: 25px;
+    color: antiquewhite;
+    background: linear-gradient(to left, rgb(135, 3, 3),transparent);
+    border-radius: 5px;
+    border-top: 1px solid rgb(246, 84, 84);
+    border-bottom: 1px solid rgb(246, 84, 84);
+    padding: 5px 7px 5px 7px; 
+    transition: .05s;
+}
+.technique .tech-text button:hover ,
+.animation .text-animation button:hover ,
+#organisation_content .organisation button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(135, 3, 3),transparent);
+    
+}
+.technique .tech-text button:hover a,
+.animation .text-animation button:hover a,
+#organisation_content .organisation button:hover a {
+    width: 100%;
+    height: 100%;
+    color:rgb(25, 18, 18);
+}
+
+/* Album photo avec javascript
+
+/* .album_photo {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+} */
+
+.album_photo {
+    background: url(../images/logosite.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.album_photo #salle_fête {
+    width: 100%;
+    height: 35rem;
+    border: 5px solid white;
+    background-position: center;
+    background-size: cover;
+}
+
+.album_photo img {
+    width: 15rem;
+    height: 10rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25%;
+    width: 100%;
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    background: rgba(255, 0, 0, 0.554);
+    
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+footer img:hover{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+footer #social,
+ #address,
+ #nav-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+#nav-footer a:hover,
+#nav-footer a.active {
+    color: red;
+    cursor: pointer;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1100px) {
+    
+    *{
+        font-size: 12px;
+    }
+    body{
+        overflow-x: hidden;
+
+    }
+    header{
+        width: 100%;
+    }
+    header #navsection{
+        gap: 10%;
+    }
+
+    /* .album_photo {
+        display: grid;
+        grid-template-columns: repeat(4, 14rem);
+        grid-area: 0;
+        background: black;
+        max-height: 20rem;
+    } */
+
+    main .patner_content {
+        width: 100%;
+        height: 38rem;
+    }
+    
+    main .patner_content .patner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+    }
+} 

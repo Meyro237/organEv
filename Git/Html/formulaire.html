@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/formulaire.css">
+    <title>Formulaire de Contact</title>
+</head>
+<body>
+    <header class="header_content">
+        <!-- Barre de navigation pour ma page initiale         -->
+        <nav id="navsection">
+                <!-- <img src="/images/mon_logo.jpg" alt="" srcset=""> -->
+                <h1 class="logo">Orga<span style="color: red;">Event</span>.com <br>
+                    <span style="font-size: 10px; color: rgba(255, 0, 0, 0.645);">SONS / LUMIERE / VIDEO </span>
+                </h1>
+            <nav id="navbar">
+                <ul class="listitem">
+                    <li class="item"><a href="/Html/index.html" class="active">Acceuil</a></li>
+                    <li class="item"><a href="/Html/formule.html">Nos Formules </a>
+                        <!-- <ul class="sous_list">
+                            <li class="sous_item"><a href="">Seminère / Incentive / Team Building </a></li>
+                            <li class="sous_item"><a href="">entreprise</a></li>
+                            <li class="sous_item"><a href="">Sons / Lumière / Matèriel DJ & Scène</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="item"><a href="/Html/services.html">Nos services</a>
+                        <!-- <ul class="sous_list">
+                            <li class="sous_item"><a href="">ENTREPRISE</a></li>
+                            <li class="sous_item"><a href="">MARIAGE / EVENEMENT RELIGIEUX </a></li>
+                            <li class="sous_item"><a href="">ANNIVERSAIRE / EVENEMENT PRIVE</a></li>
+                            <li class="sous_item"><a href="">LOCATION</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="item"><a href="/Html/about.html">A-propos</a></li>
+                    <li class="item"><a href="/Html/help.html">Contact</a></li>
+                    <li class="item"><a href="/Html/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="socialmedia">
+                <a href="" style="background: rgba(0, 0, 255, 0.752);border-radius: 5px;">F</a>
+                <a href="" style="background: green; border-radius: 50%;" >w</a>
+                <a href="" style="background: rgba(0, 0, 255, 0.752); border-radius: 5px;">In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="formulaire"> 
+         <form action="" id="contactUs">
+            <h5>Pour les services de OrgaEvent</h5>
+            <h2>IDENTIFIEZ VOUS</h2>
+            <div class="formGroup">
+                <span for="name">Nom : </span>
+                <input type="text" id="name" required maxlength="16">
+                <i></i>
+            </div>
+            <div class="formGroup">
+                <span for="locate">Localisation :</span>
+                <input type="text" id="locate" required maxlength="20">
+                <i></i>
+            </div>
+            <div class="formGroup">
+                <span for="mail">Email : </span>
+                <input type="email" id="mail" required maxlength="30">
+                <i></i>
+            </div>
+            <div class="formGroup">
+                <span for="phone">Numero de telephone : </span>
+                <input type="number" id="phone" required maxlength="20">
+                <i></i>
+            </div>
+            <div class="formGroup">
+                <input type="submit" value="ENREGISTRER" class="buttonSub" required maxlength="20">
+            </div>
+            <div class="socialMediaLog">
+                <a href=""><img src="../images/facebook.jpg" alt=""></a>
+                <a href=""><img src="../images/whap.png" alt=""></a>
+                <a href=""><img src="../images/linkendi.jpg" alt=""></a>
+            </div>
+         </form>
+        </div>
+        <div class="partenariat">
+            <form action="" method="get">
+                <h6 style="color: white;">Si vous êtes partenaire:</h6>
+                <h2>CONNECTEZ VOUS ICI</h2>
+                <div class="formPartner">
+                    <label for="username">Nom d'utilisateur: </label>
+                    <input type="text" id="username" placeholder="fiesta..." required maxlength="16">
+                    <img src="../images/attention.jpeg" alt="">
+                    <img src="../images/validé.png" alt="">
+                    <span>message d'erreur</span>
+                </div>
+                <div class="formPartner">
+                    <label for="email">Email : </label>
+                    <input type="email" id="email" placeholder="infot@fiesta.com" required maxlength="">
+                    <img src="../images/attention.jpeg" alt="">
+                    <img src="../images/validé.png" alt="">
+                    <span>message d'erreur</span>
+                </div>
+                <div class="formPartner">
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" id="password" required maxlength="16">
+                    <img src="../images/attention.jpeg" alt="">
+                    <img src="../images/validé.png" alt="">
+                    <span>message d'erreur</span>
+                </div>
+                <div class="formPartner">
+                    <label for="password">Verifiez votre mot de passe : </label>
+                    <input type="password" id="password" required maxlength="16">
+                    <img src="../images/attention.jpeg" alt="">
+                    <img src="../images/validé.png" alt="">
+                    <span>message d'erreur</span>
+                </div>
+                <div class="formPartner">
+                    <input type="submit" value="ENREGISTRER" class="buttonSub" required maxlength="20">
+                </div>
+                <div class="socialMediaLog">
+                    <a href=""><img src="../images/facebook.jpg" alt=""></a>
+                    <a href=""><img src="../images/whap.png" alt=""></a>
+                    <a href=""><img src="../images/linkendi.jpg" alt=""></a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+       
+    <footer class="footer_content">
+        <div id="social">
+            <img src="/images/facebook.jpg" alt="" srcset="">
+            <img src="/images/whap.png" alt="" srcset="">
+            <img src="/images/linkendi.jpg" alt="" srcset="">
+        </div>
+        <div id="address">
+            <span>Copyright 2023 - <strong>OrgaEvent</strong>. Tous droits réservés</span>
+            <span>Tel : 620363675</span>
+            <span>Mob : 679680940</span>
+            <span>@ : info@orgaevent.com</span>
+            <span>vous pouvez egalement nous trouver sur : <a href="#" style="color: blue;">D' Fiesta</a> </span>
+        </div>
+        <div id="nav-footer">
+            <a href="/Html/index.html" class="active">Acceuil</a>
+            <a href="/Html/formule.html">Nos Formules </a>
+            <a href="/Html/services.html">Nos services</a>
+            <a href="/Html/about.html">A-propos</a>
+            <a href="/Html/help.html">Contact</a>
+            <a href="/Html/blog.html">Blog</a>
+        </div>
+    </footer>
+
+    <script src="../script/formulaire.js"></script>
+</body>
+</html>

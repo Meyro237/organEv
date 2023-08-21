@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size: 18px;
+    outline: 0;
+    vertical-align: baseline;
+    /* overflow-x: hidden; */
+}
+body {
+    position: relative;
+    max-width: 100vw;
+    max-height: auto;
+    background: rgba(245, 222, 179, 0.657);
+    overflow-x: hidden !important;
+    z-index: 100;
+}
+
+body a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+body a::before {
+    content: '';
+    text-decoration: none;
+}
+
+ /* on va donner du style à notre barre de navigation */
+
+header#header_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+header #navsection {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    height: 5rem;
+}
+
+/* header #navsection img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left:5em;
+} */
+
+header #navsection h1 {
+    text-align: center;
+    z-index: 10;
+}
+
+header #navsection .listitem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+    position: relative;
+}
+
+header #navsection .listitem a {
+    text-decoration: none;
+    color: rgb(4, 17, 17);
+    opacity: 75%;
+}
+header #navsection .listitem a:hover,
+header #navsection .listitem a.active {
+    border-radius: 3px;
+    background:#e91616 ;
+    color: rgb(0, 9, 9);
+    opacity: 100%;
+    padding: 5px 5px;
+    
+}
+
+header #navsection .socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+header #navsection .socialmedia a {
+    text-decoration: none;
+    color: white;
+    /* border-radius: 50%; */
+    padding: 2px;
+    text-align: center;
+}
+
+main {
+    background: url('../images/logosite.png');
+    background-position: center center;
+    background-size: cover;
+    padding: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.formulaire,
+.partenariat {
+   position: relative;
+   width: 20rem;
+   height: 30rem;
+   background: rgba(0, 0, 0, 0.5);
+   border-radius: 50px 5px;
+   color: white;
+   overflow: hidden;
+}
+.partenariat {
+    background: white !important;
+    color: black !important;
+}
+.formulaire::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transform: translate(-50% -50%);
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(60deg,transparent,red,red);
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite; 
+}
+.formulaire::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transform: translate(-50% -50%);
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(60deg,transparent,white,white);
+    transform-origin: bottom right;
+    animation: animate 3s linear infinite; 
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+form {
+    position: absolute;
+    inset: 4px;
+    border-radius: 50px 5px;
+    background: rgba(0, 0, 0, 1);
+    z-index: 95;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form>h2 {
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
+}
+.formGroup {
+    position: relative;
+    width: 250px;
+    margin-top: 35px;
+}
+.formGroup input {
+    position: relative;
+    width: 100%;
+    padding: 1px 5px 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    /* color: white; */
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 99;
+}
+input[type='submit'] {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: rgb(244, 129, 129);
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 90px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input[type='submit']:active {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.401), rgb(246, 165, 165));
+    opacity: 0.8;
+}
+.formGroup span {
+    position: absolute;
+    left: 0;
+    padding: 2px 10px 10px;
+    font-size: 1em;
+    color: rgba(249, 178, 178, 0.489);
+    pointer-events: none;
+    /* z-index: 100; */
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.formGroup input:valid ~ span,
+.formGroup input:focus ~ span {
+    color:  #800e0e;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.75em;
+}
+.formGroup i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #800e0e;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 98;
+}
+.formGroup input:valid ~ i,
+.formGroup input:focus ~ i {
+    height: 34px;
+}
+
+
+
+.socialMediaLog {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.socialMediaLog a>img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.partenariat::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transform: translate(-50% -50%);
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(60deg,transparent,red,red);
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite; 
+}
+.partenariat::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transform: translate(-50% -50%);
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(60deg,transparent,black ,black);
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite; 
+    animation-delay: -3s;
+}
+.partenariat {
+    overflow: hidden;
+}
+.partenariat img {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background: black;
+}
+form .formPartner {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.formPartner label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: white !important;
+}
+.formPartner span {
+    color: white !important;
+    font-size: 12px !important;
+}
+.formPartner input{
+    border: 2px solid white;
+    display: block;
+    font-size: 14px !important;
+    width: 100%;
+    height: 20px;
+    padding-left: 5px;
+}
+input[type='submit'] {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: rgb(244, 129, 129);
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 90px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input[type='submit']:active {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.401), rgb(246, 165, 165));
+    opacity: 0.8;
+}
+.formPartner span {
+    position: absolute;
+    left: 0;
+    padding: 2px 10px 10px;
+    font-size: 1em;
+    color: rgba(249, 178, 178, 0.489);
+    pointer-events: none;
+    /* z-index: 100; */
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.formPartner input:valid ~ span,
+.formPartner input:focus ~ span {
+    color:  #800e0e;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.75em;
+}
+.formPartner i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #800e0e;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 98;
+}
+.formPartner input:valid ~ i,
+.formPartner input:focus ~ i {
+    height: 34px;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25%;
+    width: 100%;
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    background: rgba(255, 0, 0, 0.554);
+    
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+footer img:hover{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+footer #social,
+ #address,
+ #nav-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+#nav-footer a:hover,
+#nav-footer a.active {
+    color: red;
+    cursor: pointer;
+}

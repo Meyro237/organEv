@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/formule2.css">
+    <title>OrgaEvent / FORMULES</title>
+</head>
+<body>
+    <header>
+        <nav id="navsection">
+            <!-- <img src="/images/mon_logo.jpg" alt="" srcset=""> -->
+            <h1 class="logo">Orga<span style="color: red;">Event</span>.com <br>
+                <span style="font-size: 10px; color: rgba(255, 0, 0, 0.645)!important;">SONS / LUMIERE / VIDEO </span>
+            </h1>
+        <nav id="navbar">
+            <ul class="listitem">
+                <li class="item"><a href="/Html/index.html" >Acceuil</a></li>
+                <li class="item"><a href="/Html/formule.html" class="active">Nos Formules </a></li>
+                <li class="item"><a href="/Html/services.html">Nos services</a></li>
+                <li class="item"><a href="/Html/about.html">A-propos</a></li>
+                <li class="item"><a href="/Html/help.html">Contact</a></li>
+                <li class="item"><a href="/Html/blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="socialmedia">
+            <a href="" style="background: rgba(0, 0, 255, 0.752);border-radius: 5px;">F</a>
+            <a href="" style="background: green; border-radius: 50%;" >w</a>
+            <a href="" style="background: rgba(0, 0, 255, 0.752); border-radius: 5px;">In</a>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div id="entreprise">
+                <h2>NOS FORMULES</h2>
+                <h4>ENTREPRISE</h4>
+                <h2>REUNION & CONFERENCE</h2>
+            </div>
+            <div class="text_formule2">
+                <div class="plan">
+                    <div>
+                        <img src="/images/planning.png" alt="">
+                        <h4>Planification</h4>
+                    </div>
+                    <div>
+                        <img src="/images/logologistiquepng.png" alt="">
+                        <h4>Logistique</h4>
+                    </div>
+                    <div>
+                        <img src="/images/logo_rh.png" alt="">
+                        <h4>Resources Humaines</h4>
+                    </div>
+                    <div>
+                        <img src="/images/logo_materiel.jpg" alt="">
+                        <h4>Materiels</h4>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Nous avons crée rien que pour vous des formules adaptés à vos événements d'entreprise : conférences et séminaires. 
+                        <br>  De l'événement en interne avec vos collaborateurs jusqu'au séminaire des grandes entreprises, nous vous proposons plusieurs formules adaptés à vos besoins. 
+                        <br> Toutes nos formules sont clé-en-main. <br>
+                    <strong>OrgaEvent</strong> votre partenaire événementiel !
+                    </p>
+                    <p>Que vous soyez une petite ou une grande entreprise, vos conférences, summit, congrès salon ou lancement de produits connaîtront 
+                        le succès qu’ils méritent grâce à la location de matériel professionnel et à la personnalisation des offres :
+                      <br>  -   Sonorisation & Micros.                        
+                       <br> -   Ecrans & Videos
+                       <br> -   Streaming & Traduction</p>
+                    <p>Chaque type d’évènement doit répondre à des besoins matériels spécifiques.</p>
+
+                </div>
+            </div>
+            <div class="formule_popup" >
+                <div>
+                    <img src="/images/micro.png" alt="">
+                    <h3>
+                       <br> SONORISATION
+                       <br> &
+                       <br> MICROPHONE</h3>
+                    <button id="sonopopup" type="submit" onclick="sonotoggle()">Découvrez nous formules</button>
+                </div>
+                <div>
+                    <img src="/images/ecran.png" alt="">
+                    <h3>
+                       <br> ECRAN
+                       <br> &
+                       <br> VIDEO</h3>
+                    <button type="submit">Découvrez nous formules</button>
+                </div>
+                <div>
+                    <img src="/images/streaming.png" alt="">
+                    <h3>
+                       <br> STREAMING
+                       <br> &
+                       <br> TRADUCTION</h3>
+                    <button type="submit">Découvrez nous formules</button>
+                </div>  
+            </div>         
+        </section>
+        <!-- un effet popup avec js pour afficher les tarifs de location du materiel de sono -->
+        <section id="popup_loca_sono" style="background: rgba(125, 7, 236, 0.716);">
+            <a href="" onclick="sonotoggle()"><img src="/images/fermer.png" alt="" style="width: 2rem;height: 2rem;"></a>
+            <div class="titre">
+                <h1>SONORISATION 
+                    <br>  &
+                    <br> MICROPHONES
+                </h1>
+            </div>
+            <div class="tarif-sono">
+                <div>
+                    <img src="/images/reunion1.png" alt="">
+                    <h3>REUNION / MICRO HF</h3>
+                    <h6>(21 MICROPHONES)</h6>
+                    <span>1.5M</span>
+                    <p>
+                        1 - Système de réunion/conférence sans fil Rondson <br>
+                        1 - Micro président <br>
+                        20 - Micro délégués <br>
+                        1 - Station de réception WDM69M-2 <br>
+                        2 - Valise de transport aluminium <br>
+                        2 - Enceinte Actif 10" <br>
+                        1 - Table de mixage analogique 
+                    </p>
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>
+                </div>
+                <div>
+                    <img src="/images/reunion3.jpg" alt="">
+                    <h3>REUNION / MICRO HF</h3>
+                    <h6> (11 MICROPHONES)</h6> 
+                    <span>850K</span>  
+                    <p>
+                        1 - Système de réunion/conférence sans fil Rondson <br>
+                        1 - Micro président   <br>
+                        10 - Micro délégués <br>
+                        1 - Station de réception WDM69M-2 <br>
+                        1 - Valise de transport aluminium <br>
+                        2 - Enceinte Actif 10" <br>
+                        1 - Table de mixage analogique 
+                    </p> 
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>           
+                 </div>
+                <div>
+                    <img src="/images/reunion2.png" alt="">
+                    <h3>DISCOURS AUTONOME</h3>
+                    <h6>(MICRO SERE TETE + MAIN)</h6>
+                    <span>420K</span>
+                    <p>
+                        1 - Enceinte sur batterie <br>
+                        1 - Micro main <br>
+                        1 - Micro serre tête   
+                    </p>
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>
+                </div>
+                <div>
+                    <img src="/images/discours.png" alt="">
+                    <h3> DISCOURS <br>
+                        SCENES <br>
+                        PUPITRE
+                    </h3>
+                    <h6>(200 pas)</h6>
+                    <span>1.8M</span>
+                    <p>
+                        2 - Enceinte 15" - 750Watts <br>
+                        2 - Caissons de basse 18" - 1000Watts <br>                        
+                        1 - Kit d'amplification 2k Watts   br                     
+                        1 - Pupitre en plexiglass <br>
+                        1 - Table de mixage analogique <br>
+                        2 - Micros sans fil <br>
+                        1 - Scène habille 3x2m (hauteur au choix)
+                    </p>
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>
+                </div>
+                <div>
+                    <img src="/images/reunion2.png" alt="">
+                    <h3>DISCOURS / SCENE / PUPITRE</h3>
+                    <h6>200 Pass</h6>
+                    <span>12...</span>
+                    <p>
+                            2 - Enceinte 15" - 750Watts <br>
+                            2 - Caissons de basse 18" - 1000Watts <br>
+                            1 - Kit d'amplification 2k Watts <br>
+                            1 - Pupitre en plexiglass <br>
+                            1 - Table de mixage analogique <br>
+                            2 - Micros sans fil <br>
+                            1 - Scène habille 3x2m (hauteur au choix) <br>
+                    </p>
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>
+                </div>
+                <div>
+                    <img src="/images/discours.png" alt="">
+                    <h3>DISCOURS</h3>
+                    <h6>200 Pass</h6>
+                    <span>23...K</span>
+                    <p>
+                            2 - Enceinte 15" - 750Watts <br>
+                            2 - Caissons de basse 18" - 1000Watts <br>
+                            1 - Table de mixage analogique <br>
+                            2 - Micros sans fil <br>
+                    </p>
+                    <button type="submit" onclick="commandToggle()">COMMANDER</button>
+                </div>
+
+                <br>
+                <p style="background: #44f4; width: 40rem;">Les prix affichés sont hors taxes (hors taxes sur les valeurs ajoutées) 
+                    Les formules inclus le déplacement à Douala et en Région Littoral dans la limite de 20km autour de Douala, 
+                    ainsi que la location de matériel et son exploitation par du personnel qualifié. Tous déplacements au delà de ces zones seront facturés au client. 
+                     Le lieu de l'événement est prise en charge par le client, 
+                    et une assurance pourra être demandé par le lieu de réception ou se déroule l'évenement. </p>
+            </div>
+        </section>
+
+        <div id="command">
+            <h1>ESPACE DE COMMANDE</h1> 
+            <button class="close" onclick="commandToggle()">X</button>
+            <form action="">
+                <label for="name"> Nom de l'entreprise :</label>
+                <input type="text" value="" id="name">
+                <label for="address"> Localisation: </label>
+                <input type="text" value="" id="address">
+                <label for="email"> Email: </label>
+                <input type="text" value="" id="email">
+                <label for="number"> Tel: </label>
+                <input type="number" value="" id="number">
+                <textarea name="commentaire" id="commentaire" cols="45" rows="10">Expliquez nous vos besoins extraits...</textarea>
+                <button type="submit" style="width: 3.5rem;">Valider</button>
+            </form>
+        </div>
+
+
+        <div class="patner_content">
+            <h1 style="font-size: 31px;">ILS NOUS FONT CONFIANCE</h1>
+            <P style="text-align: center;"><strong>OrgaEvent</strong> c'est une multitude de références, qu'elles soient nationales, internationales ou locales.
+                <br> Petites entreprises ou grandes sociétés, associations, particuliers, fédérations ou institutions,
+                <br><strong>OrgaEvent</strong> est le partenaire de tous vos projets événementiels.</P>
+            <div class="patner">
+                <img src="/images/afrfbank.png" alt="" srcset="">
+                <img src="/images/santa_lucia.png" alt="" srcset="" style="height: 10rem;width: 7rem;">
+                <img src="/images/serena_1.png" alt="" srcset="">
+                <img src="/images/epimage.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <section class="album_photo">
+            <img src="/images/anniv.jpg" alt="" srcset="">
+            <img src="/images/evenMariage.jpg" alt="" srcset="">
+            <img src="/images/evenMariage2.jpg" alt="" srcset="">
+            <img src="/images/lamrié.jpg" alt="" srcset="">
+            <img src="/images/lesmaries1.jpg" alt="" srcset="">
+            <img src="/images/lesmarié2.jpg" alt="" srcset="">
+            <img src="/images/lesmarié3.jpg" alt="" srcset="">
+            <img src="/images/mariTH.jpg" alt="" srcset="">
+        </section>
+    </main>
+    
+    <footer class="footer_content">
+        <div id="social">
+            <a href="https: www.facebook.fr"><img src="/images/facebook.jpg" alt="" srcset=""></a>
+            <img src="/images/whap.png" alt="" srcset="">
+            <img src="/images/linkendi.jpg" alt="" srcset="">
+        </div>
+        <div id="address">
+            <span>Copyright 2023 - <strong>OrgaEvent</strong>. Tous droits réservés</span>
+            <span>Tel : 620363675</span>
+            <span>Mob : 679680940</span>
+            <span>@ : info@orgaevent.com</span>
+            <span>vous pouvez egalement nous trouver sur : <a href="#" style="color: blue;">D' Fiesta</a> </span>
+        </div>
+        <div id="nav-footer">
+            <a href="/Html/index.html">Acceuil</a>
+            <a href="/Html/formule.html" class="active">Nos Formules </a>
+            <a href="/Html/services.html">Nos services</a>
+            <a href="/Html/about.html">A-propos</a>
+            <a href="/Html/help.html">Contact</a>
+            <a href="/Html/blog.html">Blog</a>
+        </div>
+    </footer>
+
+    <script src="/script/formule2.js"></script>
+</body>
+</html>
